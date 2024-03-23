@@ -1,0 +1,166 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+:root {
+    --color: red;
+    --size: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.heart-container {
+    position: absolute;
+    opacity: 1;
+}
+
+.heart {
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(45deg);
+    transform-origin: center;
+    position: relative;
+    background: var(--color);
+    margin: 10px auto;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--color);
+}
+
+.heart:before {
+    left: calc(var(--size) / 2 * -1);
+}
+
+.heart:after {
+    top: calc(var(--size) / 2 * -1);
+}
+
+
+
+
+.enable-scroll {
+    overflow: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.custom-pink-bg {
+    background-color: pink;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpapers.com/images/hd/cute-aesthetic-heavenly-sky-xwxnnh43pj9bxyxw.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.countdown-box {
+    background-color: pink;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/*heart animation*/
+html,
+body {
+    height: 100%
+}
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.heart {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-moz-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-ms-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@keyframes love {
+    0% {
+        top: 110%
+    }
+}

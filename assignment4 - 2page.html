@@ -1,0 +1,127 @@
+<!-- Akbota Zhaksylyk, Assignment - 4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Gift Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtklEQVR4nO1Zv4sTQRQeBUGwEBsVf6GCnVqYfW/jEYh5b2MjynWnqJ2IoHcnFlpqLTaW4o9OiwMbRbSx8x8QFA6uFMVGudybvShebmWSeHfebpLJZpPdg/3ga5blzfe9eTM781apHDly5Mg8Fr3CAWGYFMJ3mnFWCLUw1IXgqxC+1YS362X3oG28ehUPaYI7Jp4QfmvFQt2ObZ7dWDzt7B9YuF/GfULwVAiWNGPQjc13CJ93G9gkQjO8sI0nDE98Ku6NJ55wXDNIr4HChAVhZ2J9PKnghbjx/Ip7ri/xQu60EDb6H6ydPcZlIby5Eo/hlnkWOx5hQximrDM/iPj/TLAzIeSeH0S8XmOi50yYmo83zZ2nv8Xk4vne2J7OpcPwLLnBhkNhfNx5q7TYHdKmECyZSonK/lTa4rS1CbweNmA+SBkQp63KCN6EDGiGubSFaXvORhlIcPcZNkHCBghq6QtDOxLOR83A59SFsTU/RRjAmQwICyw5E7WNXsyAsMCGRmvIwE+vsH0jLGQh9OdLpR0hA61vAdxPW6DuzQeR4psGqid3Jnv4Sjz7Wpdht+oGn+BaZg0wTKpeCJTapBnepy1Wryfhh+Cu2tzTQGstuLuE4Uvqovkf4Xvfl3yfCmi6BWmLF8LfC55b6kv8qgnnrDD8SVF8w1xJ1SAQci4lcUfuWzzjss/u1YHEr84Ejo+ynKTZY4IrKkkIu6fMKXAEZaO1h2cSFb9iouocHeruRPCjVnHG1DBheqCa4eMQDMzWPPeIGgWCcnmrJnyYXObxpTlMqlFDV/Byu6sct95/mTamShPiFY+ZG1KcktFUPKGygKBQ2CIM96za5s3GLzwKqse3qazB97DYzGxHAzAX+1gw0tkgd3rt7c6cZ8yiz2TWu/1GEsZXQvi6zs7hji/myJEjh9rI+Av6K/Bt8zMD1QAAAABJRU5ErkJggg==">
+</head>
+
+<body class="enable-scroll">
+    <div class="background-image"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-pink-bg">
+        <a class="navbar-brand" href="#">Gift Store - Make a Gift to Your Beloved</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="assignment4 - 1page.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="assignment4 - 2page.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="assignment4 - 3page.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Our Gift Products</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img class="product-image"
+                        src="https://cdn.shopify.com/s/files/1/0588/6099/4756/files/IMG_1947-1024x1011.jpg"
+                        alt="Flowers">
+                    <h2>Flowers</h2>
+                    <p>Beautiful and fresh flowers to express your love.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img class="product-image"
+                        src="https://www.mashed.com/img/gallery/the-untold-truth-of-sweethearts-conversation-hearts/intro-1579903182.jpg"
+                        alt="Candies">
+                    <h2>Candies</h2>
+                    <p>Delicious candies to sweeten your day.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <img class="product-image"
+                        src="https://www.dontwasteyourmoney.com/wp-content/uploads/2021/01/best-romantic-chocolate-box-scaled.jpeg"
+                        alt="Chocolates">
+                    <h2>Chocolates</h2>
+                    <p>Indulgent chocolates for a delightful treat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"></div>
+    <script src="sss.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                alert('Product clicked!');
+            });
+
+            card.addEventListener('mouseover', () => {
+                card.style.backgroundColor = 'lightgray';
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.style.backgroundColor = '';
+            });
+
+            card.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    alert('Enter key pressed on a product card!');
+                }
+            });
+        });
+
+        // Define JavaScript objects for gift products
+        const flowers = {
+            name: "Flowers",
+            imageSrc: "https://cdn.shopify.com/s/files/1/0588/6099/4756/files/IMG_1947-1024x1011.jpg",
+            description: "Beautiful and fresh flowers to express your love."
+        };
+
+        const candies = {
+            name: "Candies",
+            imageSrc: "https://www.mashed.com/img/gallery/the-untold-truth-of-sweethearts-conversation-hearts/intro-1579903182.jpg",
+            description: "Delicious candies to sweeten your day."
+        };
+
+        const chocolates = {
+            name: "Chocolates",
+            imageSrc: "https://www.dontwasteyourmoney.com/wp-content/uploads/2021/01/best-romantic-chocolate-box-scaled.jpeg",
+            description: "Indulgent chocolates for a delightful treat."
+        };
+
+        // Access the properties of the objects
+        console.log(flowers.name); // "Flowers"
+        console.log(candies.imageSrc); // URL to the candies image
+        console.log(chocolates.description); // "Indulgent chocolates for a delightful treat"
+    </script>
+</body>
+
+</html>

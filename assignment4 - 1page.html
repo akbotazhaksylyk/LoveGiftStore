@@ -1,0 +1,100 @@
+<!-- Akbota Zhaksylyk, Assignment - 4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Store - Make a Gift to Your Beloved</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtklEQVR4nO1Zv4sTQRQeBUGwEBsVf6GCnVqYfW/jEYh5b2MjynWnqJ2IoHcnFlpqLTaW4o9CjtDyhKwEHLlZae0lcyQ"
+        style="position: absolute;">
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="bg_heart" style="position: absolute;"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-pink-bg">
+        <a class="navbar-brand" href="#">Gift Store - Make a Gift to Your Beloved</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="assignment4 - 1page.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="assignment4 - 2page.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="assignment4 - 3page.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container"></div>
+    <script src="sss.js"></script>
+
+    <div class="container mt-5">
+        <h1>Welcome to our Gift Store</h1>
+        <p>Find the perfect gift for your beloved in our wide selection of thoughtful gifts and surprises.</p>
+        <div class="countdown-box">
+            Valentine's Day is in <span id="countdown"></span>.
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const valentinesDay = new Date('2023-02-14T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = valentinesDay - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        updateCountdown(); // Initial call
+        setInterval(updateCountdown, 1000); // Updating the countdown every second
+
+        // Heart animation
+        $("#header-plugin").load("https://vivinantony.github.io/header-plugin/", function () {
+            $("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt")
+        });
+
+        var love = setInterval(function () {
+            var r_num = Math.floor(Math.random() * 40) + 1;
+            var r_size = Math.floor(Math.random() * 65) + 10;
+            var r_left = Math.floor(Math.random() * 100) + 1;
+            var r_bg = Math.floor(Math.random() * 25) + 100;
+            var r_time = Math.floor(Math.random() * 5) + 5;
+
+            $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+
+            $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
+
+            $('.heart').each(function () {
+                var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+                var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+                if (top <= -100 || width >= 150) {
+                    $(this).detach();
+                }
+            });
+        }, 500);
+    </script>
+</body>
+
+</html>
